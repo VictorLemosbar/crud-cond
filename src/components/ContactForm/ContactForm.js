@@ -33,9 +33,7 @@ function ContactForm({contactToEdit, onSave}){
           placeholder='nome'
           value={nome}
           onChange={(e) => setNome(e.target.value)}
-
-        
-        />
+ />
 
         <buttom type='submit'>Salvar</buttom>
       </form>
