@@ -24,7 +24,18 @@ function App() {
     }
   }
 
-  const handleSaveContact = (contact) => {};
+
+
+  const handleSaveContact = (contact) => {
+      if (contact.id) {
+        setContacts(contacts.map(c => c.id === contact.id ? contacts: c));
+        alert("Contat alterado com sucesso")
+    } else {
+      contact.id = Date.now();
+      setContacts([...contacts, contact]);
+      alert("Contato cadastrado com sucesso")
+    }
+  };
   const handleDeleteContact = (id) => {};
   const startEdit = (contact) => {};
   const showCreateForm = () => {};
